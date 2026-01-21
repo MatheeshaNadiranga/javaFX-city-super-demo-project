@@ -17,7 +17,7 @@ public class DashboardViewController {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("customer-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Customer Management");
+        stage.setTitle("Customer Management System");
         stage.setScene(scene);
         stage.show();
     }
@@ -37,7 +37,7 @@ public class DashboardViewController {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("orders.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Item Management");
+        stage.setTitle("Item Management System");
         stage.setScene(scene);
         stage.show();
     }
