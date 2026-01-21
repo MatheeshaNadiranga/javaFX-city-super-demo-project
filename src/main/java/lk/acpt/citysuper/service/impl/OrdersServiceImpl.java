@@ -10,11 +10,7 @@ import java.sql.*;
 
 public class OrdersServiceImpl implements OrdersService {
 
-    @Override
-    public Items addOrder() throws SQLException, ClassNotFoundException {
 
-        return null;
-    }
 
     @Override
     public int getNextOrderId() throws SQLException, ClassNotFoundException {
