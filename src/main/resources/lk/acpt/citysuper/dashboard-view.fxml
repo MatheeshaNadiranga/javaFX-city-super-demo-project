@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.acpt.citysuper.controller.DashboardViewController">
+
+   <!-- Header Section -->
+   <top>
+      <VBox alignment="CENTER" spacing="10.0" style="-fx-background-color: rgba(0, 0, 0, 0.2); -fx-padding: 30;">
+         <Label text="City Super" textFill="WHITE">
+            <font>
+               <Font name="SansSerif Bold" size="42.0" />
+            </font>
+            <effect>
+               <DropShadow color="rgba(0, 0, 0, 0.5)" offsetY="3.0" radius="10.0" />
+            </effect>
+         </Label>
+         <Label text="Management Dashboard" textFill="#E0E0E0">
+            <font>
+               <Font name="SansSerif Regular" size="16.0" />
+            </font>
+         </Label>
+      </VBox>
+   </top>
+
+   <!-- Center Content -->
+   <center>
+      <VBox alignment="CENTER" spacing="30.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="40.0" left="50.0" right="50.0" top="40.0" />
+         </padding>
+
+         <!-- First Row of Cards -->
+         <HBox alignment="CENTER" spacing="30.0">
+            <!-- Manage Items Card -->
+            <VBox alignment="CENTER" prefHeight="220.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-padding: 30;">
+               <effect>
+                  <DropShadow color="rgba(0, 0, 0, 0.3)" offsetY="10.0" radius="20.0" />
+               </effect>
+
+               <Label style="-fx-font-size: 50;" text="📦" />
+
+               <Label text="Manage Items" textFill="#333333">
+                  <font>
+                     <Font name="SansSerif Bold" size="20.0" />
+                  </font>
+               </Label>
+
+               <Label text="Add, edit and organize inventory" textAlignment="CENTER" textFill="#777777" wrapText="true">
+                  <font>
+                     <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+               </Label>
+
+               <Button onAction="#items" style="-fx-background-color: linear-gradient(to right, #667eea, #764ba2); -fx-text-fill: white; -fx-background-radius: 25; -fx-padding: 12 30 12 30; -fx-font-size: 14; -fx-font-weight: bold; -fx-cursor: hand;" text="Open Items">
+                  <effect>
+                     <DropShadow color="rgba(102, 126, 234, 0.4)" offsetY="5.0" radius="10.0" />
+                  </effect>
+               </Button>
+            </VBox>
+
+            <!-- Manage Customers Card -->
+            <VBox alignment="CENTER" prefHeight="220.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-padding: 30;">
+               <effect>
+                  <DropShadow color="rgba(0, 0, 0, 0.3)" offsetY="10.0" radius="20.0" />
+               </effect>
+
+               <Label style="-fx-font-size: 50;" text="👥" />
+
+               <Label text="Manage Customers" textFill="#333333">
+                  <font>
+                     <Font name="SansSerif Bold" size="20.0" />
+                  </font>
+               </Label>
+
+               <Label text="View and manage customer records" textAlignment="CENTER" textFill="#777777" wrapText="true">
+                  <font>
+                     <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+               </Label>
+
+               <Button onAction="#customers" style="-fx-background-color: linear-gradient(to right, #f093fb, #f5576c); -fx-text-fill: white; -fx-background-radius: 25; -fx-padding: 12 30 12 30; -fx-font-size: 14; -fx-font-weight: bold; -fx-cursor: hand;" text="Open Customers">
+                  <effect>
+                     <DropShadow color="rgba(240, 147, 251, 0.4)" offsetY="5.0" radius="10.0" />
+                  </effect>
+               </Button>
+            </VBox>
+         </HBox>
+
+         <!-- Second Row - New Orders Card -->
+         <HBox alignment="CENTER" spacing="30.0">
+            <VBox alignment="CENTER" prefHeight="220.0" prefWidth="250.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-padding: 30;">
+               <effect>
+                  <DropShadow color="rgba(0, 0, 0, 0.3)" offsetY="10.0" radius="20.0" />
+               </effect>
+
+               <Label style="-fx-font-size: 50;" text="🛒" />
+
+               <Label text="New Orders" textFill="#333333">
+                  <font>
+                     <Font name="SansSerif Bold" size="20.0" />
+                  </font>
+               </Label>
+
+               <Label text="Create and process new orders" textAlignment="CENTER" textFill="#777777" wrapText="true">
+                  <font>
+                     <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+               </Label>
+
+               <Button onAction="#orders" style="-fx-background-color: linear-gradient(to right, #4facfe, #00f2fe); -fx-text-fill: white; -fx-background-radius: 25; -fx-padding: 12 30 12 30; -fx-font-size: 14; -fx-font-weight: bold; -fx-cursor: hand;" text="Create Order">
+                  <effect>
+                     <DropShadow color="rgba(79, 172, 254, 0.4)" offsetY="5.0" radius="10.0" />
+                  </effect>
+               </Button>
+            </VBox>
+         </HBox>
+
+         <!-- Quick Stats Section -->
+         <HBox alignment="CENTER" spacing="40.0" style="-fx-padding: 20;">
+            <VBox alignment="CENTER" spacing="5.0">
+               <Label text="1,234" textFill="WHITE">
+                  <font>
+                     <Font name="SansSerif Bold" size="28.0" />
+                  </font>
+               </Label>
+               <Label text="Total Items" textFill="#E0E0E0">
+                  <font>
+                     <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+               </Label>
+            </VBox>
+
+            <VBox prefHeight="50.0" prefWidth="2.0" style="-fx-background-color: rgba(255, 255, 255, 0.3);" />
+
+            <VBox alignment="CENTER" spacing="5.0">
+               <Label text="567" textFill="WHITE">
+                  <font>
+                     <Font name="SansSerif Bold" size="28.0" />
+                  </font>
+               </Label>
+               <Label text="Active Customers" textFill="#E0E0E0">
+                  <font>
+                     <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+               </Label>
+            </VBox>
+
+            <VBox prefHeight="50.0" prefWidth="2.0" style="-fx-background-color: rgba(255, 255, 255, 0.3);" />
+
+            <VBox alignment="CENTER" spacing="5.0">
+               <Label text="89" textFill="WHITE">
+                  <font>
+                     <Font name="SansSerif Bold" size="28.0" />
+                  </font>
+               </Label>
+               <Label text="Pending Orders" textFill="#E0E0E0">
+                  <font>
+                     <Font name="SansSerif Regular" size="12.0" />
+                  </font>
+               </Label>
+            </VBox>
+         </HBox>
+      </VBox>
+   </center>
+
+   <!-- Footer -->
+   <bottom>
+      <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: rgba(0, 0, 0, 0.2); -fx-padding: 20;">
+         <Label text="© 2024 City Super | Version 2.0" textFill="#E0E0E0">
+            <font>
+               <Font name="SansSerif Regular" size="11.0" />
+            </font>
+         </Label>
+      </HBox>
+   </bottom>
+</BorderPane>

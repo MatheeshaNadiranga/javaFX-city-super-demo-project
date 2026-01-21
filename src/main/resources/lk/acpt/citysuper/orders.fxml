@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="950.0" prefWidth="1200.0" style="-fx-background-color: #F5F5F5;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.acpt.citysuper.controller.OrdersController">
+
+    <!-- Header -->
+    <top>
+        <VBox style="-fx-background-color: linear-gradient(to right, #667eea, #764ba2); -fx-padding: 20;">
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+                <Label style="-fx-font-size: 36; -fx-text-fill: white;" text="🛒" />
+                <Label text="Place Order Form" textFill="WHITE">
+                    <font>
+                        <Font name="SansSerif Bold" size="32.0" />
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- Main Content -->
+    <center>
+        <VBox spacing="25.0" style="-fx-padding: 30;">
+
+            <!-- Customer Details Section -->
+            <VBox spacing="15.0" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 10; -fx-border-color: #E0E0E0; -fx-border-radius: 10; -fx-border-width: 1;">
+                <effect>
+                    <DropShadow color="rgba(0, 0, 0, 0.1)" radius="10.0" />
+                </effect>
+
+                <Label text="Customer Details" textFill="#667eea">
+                    <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                    </font>
+                </Label>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <!-- Customer ID and Search -->
+                    <VBox spacing="8.0">
+                        <Label text="Customer ID" textFill="#E53E3E">
+                            <font>
+                                <Font name="SansSerif Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <HBox spacing="10.0">
+                            <TextField fx:id="txtCustomerId" prefWidth="200.0" promptText="Enter Customer ID" style="-fx-background-color: #F5F5F5; -fx-border-color: #E0E0E0; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </TextField>
+                            <Button onAction="#btnSearchCustomer" style="-fx-background-color: #E53E3E; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20; -fx-font-size: 13; -fx-font-weight: bold; -fx-cursor: hand;" text="Search">
+                                <effect>
+                                    <DropShadow color="rgba(229, 62, 62, 0.3)" offsetY="3.0" radius="8.0" />
+                                </effect>
+                            </Button>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Customer Name (Read-only) -->
+                    <VBox spacing="8.0" HBox.hgrow="ALWAYS">
+                        <Label text="Customer Name" textFill="#333333">
+                            <font>
+                                <Font name="SansSerif Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtCustomerName" editable="false" prefWidth="300.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #E0E0E0; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                    </VBox>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <!-- Order ID (Read-only) -->
+                    <VBox spacing="8.0">
+                        <Label text="Order ID" textFill="#333333">
+                            <font>
+                                <Font name="SansSerif Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtOrderId" editable="false" prefWidth="200.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #E0E0E0; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                    </VBox>
+
+                    <!-- Date (Read-only) -->
+                    <VBox spacing="8.0">
+                        <Label text="Date" textFill="#333333">
+                            <font>
+                                <Font name="SansSerif Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtDate" editable="false" prefWidth="200.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #E0E0E0; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <!-- Item Select Section -->
+            <VBox spacing="15.0" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 10; -fx-border-color: #E0E0E0; -fx-border-radius: 10; -fx-border-width: 1;">
+                <effect>
+                    <DropShadow color="rgba(0, 0, 0, 0.1)" radius="10.0" />
+                </effect>
+
+                <Label text="Item Select" textFill="#667eea">
+                    <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                    </font>
+                </Label>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <!-- Item ID and Search -->
+                    <VBox spacing="8.0">
+                        <Label text="Item ID" textFill="#E53E3E">
+                            <font>
+                                <Font name="SansSerif Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <HBox spacing="10.0">
+                            <TextField fx:id="txtItemId" prefWidth="150.0" promptText="Enter Item ID" style="-fx-background-color: #F5F5F5; -fx-border-color: #E0E0E0; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;">
+                                <font>
+                                    <Font size="13.0" />
+                                </font>
+                            </TextField>
+                            <Button onAction="#btnSearchItem" style="-fx-background-color: #E53E3E; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 20; -fx-font-size: 13; -fx-font-weight: bold; -fx-cursor: hand;" text="Search">
+                                <effect>
+                                    <DropShadow color="rgba(229, 62, 62, 0.3)" offsetY="3.0" radius="8.0" />
+                                </effect>
+                            </Button>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Item Name (Read-only) -->
+                    <VBox spacing="8.0">
+                        <Label text="Item Name" textFill="#333333">
+                            <font>
+                                <Font name="SansSerif Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtItemName" editable="false" prefWidth="200.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #E0E0E0; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                    </VBox>
+
+                    <!-- Unit Price (Read-only) -->
+                    <VBox spacing="8.0">
+                        <Label text="Unit Price" textFill="#333333">
+                            <font>
+                                <Font name="SansSerif Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtUnitPrice" editable="false" prefWidth="120.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #E0E0E0; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                    </VBox>
+
+                    <!-- Stock Qty (Read-only) -->
+                    <VBox spacing="8.0">
+                        <Label text="Stock Qty" textFill="#333333">
+                            <font>
+                                <Font name="SansSerif Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtStockQty" editable="false" prefWidth="100.0" style="-fx-background-color: #FAFAFA; -fx-border-color: #E0E0E0; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                    </VBox>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="20.0">
+                    <!-- Order Quantity -->
+                    <VBox spacing="8.0">
+                        <Label text="Order Qty" textFill="#E53E3E">
+                            <font>
+                                <Font name="SansSerif Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtOrderQty" prefWidth="150.0" promptText="Enter quantity" style="-fx-background-color: #F5F5F5; -fx-border-color: #E0E0E0; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 10;">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                    </VBox>
+
+                    <!-- Add Button -->
+                    <VBox spacing="8.0">
+                        <Label text=" " textFill="#333333">
+                            <font>
+                                <Font name="SansSerif Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Button onAction="#btnAdd" style="-fx-background-color: #E53E3E; -fx-text-fill: white; -fx-background-radius: 8; -fx-padding: 10 30; -fx-font-size: 13; -fx-font-weight: bold; -fx-cursor: hand;" text="Add">
+                            <effect>
+                                <DropShadow color="rgba(229, 62, 62, 0.3)" offsetY="3.0" radius="8.0" />
+                            </effect>
+                        </Button>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+            <!-- Order Items Table -->
+            <VBox spacing="15.0" style="-fx-background-color: white; -fx-padding: 25; -fx-background-radius: 10; -fx-border-color: #E0E0E0; -fx-border-radius: 10; -fx-border-width: 1;">
+                <effect>
+                    <DropShadow color="rgba(0, 0, 0, 0.1)" radius="10.0" />
+                </effect>
+
+                <TableView fx:id="tblOrderItems" prefHeight="99.0" prefWidth="1088.0">
+                    <columns>
+                        <TableColumn fx:id="colItemId" prefWidth="150.0" style="-fx-alignment: CENTER;" text="Item ID" />
+                        <TableColumn fx:id="colItemName" prefWidth="250.0" text="Item Name" />
+                        <TableColumn fx:id="colUnitPrice" prefWidth="150.0" style="-fx-alignment: CENTER_RIGHT;" text="Unit Price" />
+                        <TableColumn fx:id="colQty" prefWidth="100.0" style="-fx-alignment: CENTER;" text="Qty" />
+                        <TableColumn fx:id="colTotal" prefWidth="150.0" style="-fx-alignment: CENTER_RIGHT;" text="Total" />
+                    </columns>
+                </TableView>
+            </VBox>
+
+            <!-- Net Total and Place Order Button -->
+            <HBox alignment="CENTER_RIGHT" spacing="20.0" style="-fx-padding: 10;">
+                <Label text="Net Total:" textFill="#333333">
+                    <font>
+                        <Font name="SansSerif Bold" size="20.0" />
+                    </font>
+                </Label>
+
+                <Label fx:id="lblNetTotal" text="0.00" textFill="#667eea">
+                    <font>
+                        <Font name="SansSerif Bold" size="24.0" />
+                    </font>
+                </Label>
+
+                <Button onAction="#btnPlaceOrder" style="-fx-background-color: linear-gradient(to right, #667eea, #764ba2); -fx-text-fill: white; -fx-background-radius: 25; -fx-padding: 15 40; -fx-font-size: 16; -fx-font-weight: bold; -fx-cursor: hand;" text="Place Order">
+                    <effect>
+                        <DropShadow color="rgba(102, 126, 234, 0.4)" offsetY="5.0" radius="10.0" />
+                    </effect>
+                </Button>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>
